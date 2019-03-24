@@ -1,5 +1,5 @@
 // Store the background colour
-bgColour = "#006400";
+bgColour = "#fff";
 
 // Variable to store the player
 var player;
@@ -13,6 +13,7 @@ function setup() {
 	
 	// Create the player
 	player = Rectangle(400, 400, 30, 50, "green", 0);
+	playerTurret = Rectangle(400, 375, 5, 50, "green", 0);
 	
 }
 
@@ -24,11 +25,11 @@ function draw() {
 	
 	// Draw the player
 	drawRect(player);
+	drawTurret(playerTurret);
 	
 	// Check for key presses
 	keyPressHandler();
 	
 	// Move the player
 	playerMove();
-	
 }
