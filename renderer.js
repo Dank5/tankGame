@@ -19,15 +19,14 @@ function drawRect(r) {
 }
 
 // Function to render a rectangle
-function drawTurret(r) {
+function drawTurret(r, p) {
 	
 	// Get each point rotated by the angle
 	// Get top left rotated around the bottom of the turret, top right, bottom right then bottom left
-	var p1 = rotatePoint(r.x - r.w / 2, r.y + r.h / 2, r.x, r.y + (r.h / 2), r.r);
-	var p2 = rotatePoint(r.x + r.w / 2, r.y + r.h / 2, r.x, r.y + (r.h / 2), r.r);
-	var p3 = rotatePoint(r.x + r.w / 2, r.y - r.h / 2, r.x, r.y + (r.h / 2), r.r);
-	var p4 = rotatePoint(r.x - r.w / 2, r.y -r.h / 2,  r.x, r.y + (r.h / 2), r.r);
-	
+	var p1 = rotatePoint(r.x - r.w / 2, r.y + r.h / 2, r.x, r.y + (r.h / 2), r.r + p.r);
+	var p2 = rotatePoint(r.x + r.w / 2, r.y + r.h / 2, r.x, r.y + (r.h / 2), r.r + p.r);
+	var p3 = rotatePoint(r.x + r.w / 2, r.y - r.h / 2, r.x, r.y + (r.h / 2), r.r + p.r);
+	var p4 = rotatePoint(r.x - r.w / 2, r.y -r.h / 2,  r.x, r.y + (r.h / 2), r.r + p.r);
 	// Set the fill colour
 	fill(r.c);
 	

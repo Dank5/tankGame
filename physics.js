@@ -54,6 +54,10 @@ function keyPressHandler() {
 	}
 }
 
+function turretMove() {
+	playerTurret.r = playerTurret.r + player.r;
+}
+
 // Function to move the player
 function playerMove() {
 	
