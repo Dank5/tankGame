@@ -4,8 +4,6 @@
 // Function to render a rectangle
 function drawRect(r) {
 	
-	console.log(r);
-	
 	// Get each point rotated by the angle
 	// Get top left rotated around the origin, top right, bottom right then bottom left
 	var p1 = rotatePoint(r.x - r.w / 2, r.y + r.h / 2, r.x, r.y, r.r);

@@ -25,6 +25,10 @@ function draw() {
 	// Draw the player
 	drawRect(player);
 	
-	player.r += 1;
+	// Check for key presses
+	keyPressHandler();
+	
+	// Move the player
+	playerMove();
 	
 }
