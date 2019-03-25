@@ -23,11 +23,11 @@ function keyPressHandler() {
 	// Check for movement key presses
 	// tank move right
 	if (keyIsDown(68)) {
-		player.r += rotation;
+		player.tank.r += rotation;
 	}
 	// tank move left
 	if (keyIsDown(65)) {
-		player.r -= rotation;
+		player.tank.r -= rotation;
 	}
 	// tank move up
 	if (keyIsDown(87)) {
@@ -46,16 +46,16 @@ function keyPressHandler() {
 	// turret movement
 	// turret left
 	if (keyIsDown(79)) {
-		playerTurret.r -= (turretRotation * degToRad);
+		player.turret.r -= (turretRotation * degToRad);
 	}
 	//turret right;
 	if (keyIsDown(80)) {
-		playerTurret.r += (turretRotation * degToRad);
+		player.turret.r += (turretRotation * degToRad);
 	}
 }
 
 function turretMove() {
-	playerTurret.r = playerTurret.r + player.r;
+	player.turret.r = player.turret.r + player.tank.r;
 }
 
 // Function to move the player
@@ -82,9 +82,9 @@ function playerMove() {
 	
 	
 	// Calculate the x and y components of movement
-	player.x += playerSpeed * Math.sin(player.r * degToRad);
-	player.y -= playerSpeed * Math.cos(player.r * degToRad);
-	playerTurret.x += playerSpeed * Math.sin(player.r * degToRad);
-	playerTurret.y -= playerSpeed * Math.cos(player.r * degToRad);
+	player.tank.x += playerSpeed * Math.sin(player.tank.r * degToRad);
+	player.tank.y -= playerSpeed * Math.cos(player.tank.r * degToRad);
+	player.turret.x += playerSpeed * Math.sin(player.tank.r * degToRad);
+	player.turret.y -= playerSpeed * Math.cos(player.tank.r * degToRad);
 }
 

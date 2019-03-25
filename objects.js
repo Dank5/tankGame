@@ -9,3 +9,9 @@ function Rectangle(_x, _y, width, height, colour, rotation) {
 	return {x:_x, y:_y, w:width, h:height, c:colour, r:rotation};
 	
 }
+
+// Create a function to create a tank object (takes in a tank shape, turret shape, and bullet speed)
+function Tank(tank, turret, bs) {
+	
+	return {tank:tank, turret:turret, bulletSpeed:bs}
+}
